@@ -12,13 +12,22 @@ const atividadesIniciais = [
 ]
 
 const disciplinas = [
-  { nome: 'Matemática', nota: 9.0 },
-  { nome: 'Português', nota: 8.5 },
-  { nome: 'Física', nota: 7.0 },
+  { nome: 'Matemática', nota: 8.4 },
+  { nome: 'Português', nota: 9.0 },
+  { nome: 'Física', nota: 7.5 },
+  { nome: 'História', nota: 8.8 },
   { nome: 'Química', nota: 8.0 },
-  { nome: 'História', nota: 8.5 },
   { nome: 'Geografia', nota: 6.5 },
 ]
+
+const dadosAluno = {
+  nome: 'Maria Silva',
+  ano: '3° ano',
+  media: '8.4',
+  faltas: '2',
+  bolsa: 'R$ 320',
+  ranking: '5°'
+}
 
 function getNotaColor(nota) {
   if (nota >= 8) return 'var(--green)'
@@ -49,8 +58,8 @@ export default function TelaInicial() {
               <circle cx="12" cy="7" r="4"/>
             </svg>
           </div>
-          <p className={styles.name}>Fernando</p>
-          <p className={styles.year}>3° ano</p>
+          <p className={styles.name}>{dadosAluno.nome}</p>
+          <p className={styles.year}>{dadosAluno.ano}</p>
           <div className={styles.spacer} />
           <button className={styles.sairBtn} onClick={() => router.push('/loginpage')}>Sair</button>
         </aside>
@@ -58,10 +67,10 @@ export default function TelaInicial() {
         <main className={styles.main}>
           <div className={styles.stats}>
             {[
-              { label: 'Média', value: '8.5' },
-              { label: 'Faltas', value: '2' },
-              { label: 'Bolsa', value: 'R$ 500' },
-              { label: 'Ranking', value: '5°' },
+              { label: 'Média', value: dadosAluno.media },
+              { label: 'Faltas', value: dadosAluno.faltas },
+              { label: 'Bolsa', value: dadosAluno.bolsa },
+              { label: 'Ranking', value: dadosAluno.ranking },
             ].map(s => (
               <div key={s.label} className={styles.statCard}>
                 <p className={styles.statValue}>{s.value}</p>

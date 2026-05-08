@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# hyperScript 🚀
+> Uma solução inteligente contra a evasão escolar através do incentivo ao desempenho.
 
-## Getting Started
+O **hyperScript** é uma plataforma desenvolvida durante o Hackathon para combater a evasão escolar. O sistema monitora a frequência e o desempenho acadêmico dos alunos, transformando resultados positivos em incentivos financeiros semestrais, estimulando a permanência e o foco nos estudos.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📌 Funcionalidades Principais
+- **Autenticação Segura:** Sistema de login com diferenciação de perfis (Aluno/Professor).
+- **Dashboard do Aluno:** Visualização clara de médias, faltas e ranking.
+- **Incentivo Financeiro:** Cálculo estimado de bolsa/auxílio com base no desempenho atual.
+- **Gestão de Atividades:** Check-list diário de tarefas para organização do estudante.
+- **Monitoramento de Disciplinas:** Acompanhamento de notas por matéria com indicadores visuais.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠 Tecnologias Utilizadas
+- **Framework:** [Next.js](https://nextjs.org/) (React)
+- **Estilização:** CSS Modules (Design Responsivo e Moderno)
+- **Linguagem:** JavaScript 
+- **Persistência Local:** LocalStorage para simulação de dados (Mock)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🚀 Como rodar o projeto localmente
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Clone o repositório:**
+   ```bash
+   git clone [https://github.com/dressaDevv/hyperScript.git](https://github.com/dressaDevv/hyperScript.git)
 
-## Learn More
+2. **Entre na pasta do projeto**
+    ```bash
+    cd hyperScript
 
-To learn more about Next.js, take a look at the following resources:
+3. **Instale as dependências**
+    ```bash
+    npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **Inicie o servidor de Desenvolvimento**
+    ```bash
+    npm run dev
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+5. **Acesse no navegador**
+    Abra http://localhost:3000
 
-## Deploy on Vercel
+## 📌 Diferencial do Projeto
+Diferente de portais acadêmicos comuns, o **hyperScript** foca na gamificação e recompensa. Ao tornar tangível o ganho financeiro atrelado ao esforço escolar, criamos uma barreira psicológica e econômica contra o abandono das salas de aula.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Desenvolvido por Andressa durante o Hackathon 2026.

@@ -4,15 +4,36 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import styles from './login.module.css'
 
+
+const MOCK_USERS = [
+  { email: 'aluno@escola.com', senha: '123456', tipo: 'aluno' },
+]
+
 export default function LoginPage() {
   const router = useRouter()
   const [email, setEmail] = useState('')
   const [senha, setSenha] = useState('')
 
   function handleLogin(e) {
-    e.preventDefault()
-    router.push('/tela-inicial')
-  }
+      e.preventDefault()
+
+      const salvoNoStorage = JSON.parse(localStorage.getItem('user_registado'))
+    
+      const todosUsuarios = [...MOCK_USERS]
+      if (salvoNoStorage) todosUsuarios.push(salvoNoStorage)
+
+      const user = todosUsuarios.find(
+        u => u.email === email && u.senha === senha
+      )
+
+      if (!user) {
+        alert('Credenciais inválidas!')
+        return
+      }
+
+      localStorage.setItem('user', JSON.stringify(user))
+      router.push('/tela-inicial')
+    }
 
   return (
     <div className={styles.container}>

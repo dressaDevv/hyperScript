@@ -10,9 +10,27 @@ export default function RegisterPage() {
   const [senha, setSenha] = useState('')
   const [confirmar, setConfirmar] = useState('')
 
-  function handleRegister(e) {
+ function handleRegister(e) {
     e.preventDefault()
-    router.push('/tela-inicial')
+    
+    if (senha !== confirmar) {
+      alert('As senhas não coincidem!')
+      return
+    }
+
+    const novoUsuario = {
+      email: email,
+      senha: senha,
+      tipo: 'aluno' 
+    }
+
+    const usuáriosExistentes = JSON.parse(localStorage.getItem('usuarios') || '[]');
+    usuáriosExistentes.push(novoUsuario);
+    localStorage.setItem('usuarios', JSON.stringify(usuáriosExistentes));
+
+    alert('Cadastro realizado com sucesso!')
+
+    router.push('/loginpage')
   }
 
   return (
