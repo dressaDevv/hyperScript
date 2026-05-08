@@ -1,0 +1,204 @@
+.container {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.layout {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  max-width: 960px;
+  min-height: 520px;
+}
+
+.sidebar {
+  width: 160px;
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 12px 20px;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #1a3a60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.name {
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.year {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.sairBtn {
+  background: var(--bg-primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 8px 18px;
+  color: var(--text-primary);
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s;
+}
+
+.sairBtn:hover {
+  opacity: 0.8;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.statCard {
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  text-align: center;
+}
+
+.statValue {
+  color: var(--text-primary);
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.statLabel {
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  flex: 1;
+}
+
+.section {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sectionTitle {
+  color: var(--text-primary);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.atividadesList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.atividadeItem {
+  background: var(--bg-primary);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1.5px solid var(--border);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.atividadeInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.atividadeTitulo {
+  color: var(--text-primary);
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.atividadePrazo {
+  color: var(--text-secondary);
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+.badge {
+  font-size: 11px;
+  border-radius: 4px;
+  padding: 2px 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.disciplinasList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.disciplinaItem {
+  background: var(--bg-primary);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.disciplinaNome {
+  color: var(--text-primary);
+  font-size: 13px;
+}
+
+.disciplinaNota {
+  font-size: 13px;
+  font-weight: 500;
+}
